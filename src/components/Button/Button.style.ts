@@ -8,8 +8,12 @@ import {
   BUTTON_COLOR_PRIMARY,
 } from '../../colors';
 
+interface ButtonProps {
+  as: 'button' | 'a';
+}
+
 // eslint-disable-next-line import/prefer-default-export
-export const Container = styled.button`
+export const Container = styled.div<ButtonProps>`
   display: inline-block;
   font-weight: ${FONT_WEIGHT_REGULAR};
   font-family: ${FONT_FAMILY_PRIMARY};
@@ -28,7 +32,10 @@ export const Container = styled.button`
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
+  ${({ as }) => as === 'a' && 'text-decoration: none;'}
+
   &:hover {
+    color: ${BUTTON_BACKGROUND_COLOR_PRIMARY};
     background-color: ${BUTTON_BACKGROUND_COLOR_SECONDARY};
     border-color: ${BUTTON_BORDER_COLOR_SECONDARY};
   }

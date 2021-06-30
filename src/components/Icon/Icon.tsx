@@ -14,7 +14,7 @@ export interface IconProps {
 }
 
 // SVG 2 JSX https://svg2jsx.com/
-const Icon = ({ name, size, color }: IconProps): JSX.Element => {
+const Icon = ({ name, size, color }: IconProps): JSX.Element | null => {
   switch (name) {
     case 'logo':
       return <Logo size={size} color={color} />;

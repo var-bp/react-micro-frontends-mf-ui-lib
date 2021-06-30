@@ -29,8 +29,8 @@ export const Container = styled.div<ButtonProps>`
   color: ${BUTTON_COLOR_PRIMARY};
   background-color: ${BUTTON_BACKGROUND_COLOR_PRIMARY};
   border-color: ${BUTTON_BORDER_COLOR_PRIMARY};
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 
   ${({ as }) => as === 'a' && 'text-decoration: none;'}
 

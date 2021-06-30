@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const StylelintPlugin = require('stylelint-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const { env, getSharedModules } = require('./utils');
 const PACKAGE_JSON = require('../package.json');
@@ -94,10 +93,6 @@ module.exports = {
         './colors': path.join(__dirname, '../src/colors.ts'),
       },
       shared: getSharedModules(PACKAGE_JSON.dependencies),
-    }),
-    // A linter for CSS-like syntaxes like SCSS, Sass, Less and SugarSS
-    new StylelintPlugin({
-      files: '**/*.{scss,sass,css,ts,tsx,js,jsx}',
     }),
   ],
 };

@@ -46,10 +46,7 @@ module.exports = {
   env: {
     development: {
       plugins: [
-        [
-          'babel-plugin-styled-components',
-          { displayName: true, namespace: process.env.MICROFRONTEND_HOST_NAME },
-        ],
+        ['babel-plugin-styled-components', { displayName: true, namespace: process.env.MICROFRONTEND_HOST_NAME }],
       ],
     },
     production: {

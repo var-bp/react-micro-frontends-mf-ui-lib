@@ -27,10 +27,6 @@ module.exports = merge(
         new TerserPlugin({
           terserOptions: {
             parse: {
-              // We want terser to parse ecma 8 code. However, we don't want it
-              // to apply any minification steps that turns valid ecma 5 code
-              // into invalid ecma 5 code. This is why the 'compress' and 'output'
-              // sections only apply transformations that are ecma 5 safe
               ecma: 'esnext',
             },
             compress: {
